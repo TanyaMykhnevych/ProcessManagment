@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include <Windows.h>
-#include <clocale>
 #include <fstream>
 
 
@@ -143,7 +142,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	_tprintf(_T("NotepadExecutor has been started!\n\n"));
 	DWORD returnCode = CheckTextFiles(argv, argc);
-	_tprintf(_T("\n\n%s Return code: %u!\n\n"), !returnCode ? _T("TextFilesHandler has been finished successfully!") : _T("TextFilesHandler has been finished with errors!"), returnCode);
+	_tprintf(_T("\n\n%s Return code: %u!\n\n"), !returnCode ? _T("TextFilesHandler has been finished successfully!") 
+		: _T("TextFilesHandler has been finished with errors!"), returnCode);
 
 	return returnCode;
 }
